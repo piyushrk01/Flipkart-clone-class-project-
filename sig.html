@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Clone</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <style>
+    ::-webkit-scrollbar { display: none; } /* Hide scrollbar for cleaner UI */
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white sticky top-0 z-50 flex items-center justify-between py-3 px-6 shadow-md">
+    <div class="flex items-center gap-6">
+      <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" alt="Flipkart Logo" class="w-28">
+      <div class="rounded-2xl bg-gray-100 w-[600px] h-10 flex items-center px-4">
+        <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+        <input class="ml-2 w-full bg-transparent focus:outline-none" type="text" placeholder="Search for products, brands and more">
+      </div>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <button class="hover:bg-blue-600 hover:text-white py-2 px-3 rounded-xl flex items-center gap-2">
+        <i class="fa-regular fa-user"></i><span>Account</span>
+      </button>
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+        <i class="fa-solid fa-cart-shopping"></i><span>Cart</span>
+      </div>
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+        <i class="fa-solid fa-store"></i><span>Become Seller</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CATEGORY ROW -->
+  <section class="bg-white mt-2 shadow-sm py-4 overflow-x-auto">
+    <div class="flex justify-around min-w-[900px] px-8">
+      <div class="flex flex-col items-center cursor-pointer hover:scale-105 transition">
+        <img src="https://rukminim2.flixcart.com/flap/64/64/image/29327f40e9c4d26b.png" class="w-25">
+        <span class="text-sm font-medium mt-1">Grocery</span>
+      </div>
+      <div class="flex flex-col items-center cursor-pointer hover:scale-105 transition">
+        <img src="https://rukminim2.flixcart.com/flap/64/64/image/22fddf3c7da4c4f4.png" class="w-25">
+        <span class="text-sm font-medium mt-1">Mobiles</span>
+      </div>
+      <div class="flex flex-col items-center cursor-pointer hover:scale-105 transition">
+        <img src="https://rukminim2.flixcart.com/flap/64/64/image/0d75b34f7d8fbcb3.png" class="w-25">
+        <span class="text-sm font-medium mt-1">Fashion</span>
+      </div>
+      <div class="flex flex-col items-center cursor-pointer hover:scale-105 transition">
+        <img src="https://rukminim2.flixcart.com/flap/64/64/image/69c6589653afdb9a.png" class="w-25">
+        <span class="text-sm font-medium mt-1">Electronics</span>
+      </div>
+      <div class="flex flex-col items-center cursor-pointer hover:scale-105 transition">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/face-wash/v/z/d/200-ocean-for-men-fights-acne-pimple-brighten-skin-all-skin-original-imah5gh63zgy8ph3.jpeg?q=70" class="w-14">
+        <span class="text-sm font-medium mt-1">Men's Groom</span>
+      </div>
+      <div class="flex flex-col items-center cursor-pointer hover:scale-105 transition">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/e90944802d996756.jpg?q=100" class="w-25">
+        <span class="text-sm font-medium mt-1">Appliances</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO BANNER -->
+  <section class="mt-2 px-2">
+    <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/1338bd4fc60390d8.jpg?q=60" alt="Hero Banner" class="w-full h-73 object-cover rounded-xl shadow">
+  </section>
+
+  <!-- OFFERS SECTION -->
+  <section class="p-6 bg-white mt-4 rounded-xl shadow">
+    <h2 class="text-2xl font-bold mb-4">Special Offers</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/projector/g/d/j/atom-4x-4k-hdr-projector-native-1080p-android-12-hdr10-hdmi-original-imahg8xzzsmet4zf.jpeg?q=60" class="rounded-lg hover:scale-105 transition cursor-pointer" alt="projector">
+      <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/monitor/g/9/9/-original-imahbk3vrnvhvhrn.jpeg?q=60" class="rounded-lg hover:scale-105 transition cursor-pointer" alt="monitor">
+      <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/dslr-camera/i/o/c/eos-r100-24-1-eos-r100-kit-canon-original-imagqeydhsxgacxp.jpeg?q=60" class="rounded-lg hover:scale-105 transition cursor-pointer" alt="Camera">
+      <img src="https://rukminim1.flixcart.com/image/240/240/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=60" class="rounded-lg hover:scale-105 transition cursor-pointer" alt="Smartwatch">
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="p-6">
+    <h2 class="text-2xl font-bold mb-4">Top Deals for You</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+      <!-- Product 1 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/w/0/-original-imah9wydggh9mtxt.jpeg?q=70" class="w-full h-60 object-contain" alt="Smartphone">
+        <h3 class="mt-2 font-semibold">Smartphone</h3>
+        <p class="text-sm text-gray-600">Latest 5G mobile with high performance</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹25,999</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500" class="w-full h-60 object-contain" alt="Laptop">
+        <h3 class="mt-2 font-semibold">Laptop</h3>
+        <p class="text-sm text-gray-600">Powerful laptop for work & gaming</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹56,499</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/3/0/5/49-2-t800-ultra-smartwatch-gj103-android-ios-arceus-no-original-imah7dfxgsvhjcf7.jpeg?q=70" class="w-full h-60 object-contain" alt="Smartwatch">
+        <h3 class="mt-2 font-semibold">Smartwatch</h3>
+        <p class="text-sm text-gray-600">Fitness tracking & stylish design</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹2,999</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/y/j/m/8-c298-8-amico-white-tan-original-imahew99qfr8akb9.jpeg?q=70" class="w-full h-60 object-contain" alt="Shoes">
+        <h3 class="mt-2 font-semibold">Running Shoes</h3>
+        <p class="text-sm text-gray-600">Lightweight & comfortable sneakers</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹1,799</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/4/r/-original-imah96h6j5nbjyhf.jpeg?q=70" class="w-full h-60 object-contain" alt="Headphones">
+        <h3 class="mt-2 font-semibold">Wireless Headphones</h3>
+        <p class="text-sm text-gray-600">Crystal clear sound & bass</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹3,499</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/dslr-camera/i/o/c/eos-r100-24-1-eos-r100-kit-canon-original-imagqeydhsxgacxp.jpeg?q=70" class="w-full h-60 object-contain" alt="Camera">
+        <h3 class="mt-2 font-semibold">DSLR Camera</h3>
+        <p class="text-sm text-gray-600">Capture stunning high-res photos</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹42,999</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/refrigerator-new/h/h/e/-original-imahdvgshergdau6.jpeg?q=70" class="w-full h-60 object-contain" alt="Fridge">
+        <h3 class="mt-2 font-semibold">Refrigerator</h3>
+        <p class="text-sm text-gray-600">Double door energy saving fridge</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹22,499</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/7/k/z/-original-imahgtzqaznxha69.jpeg?q=70" class="w-full h-60 object-contain" alt="Air Conditioner">
+        <h3 class="mt-2 font-semibold">Air Conditioner</h3>
+        <p class="text-sm text-gray-600">Cool your room instantly</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹31,999</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/1/u/c/1-tsot108-limestone-men-original-imahgddha7p9znu6.jpeg?q=70" class="w-full h-60 object-contain" alt="Watch">
+        <h3 class="mt-2 font-semibold">Luxury Watch</h3>
+        <p class="text-sm text-gray-600">Elegant design with premium build</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹7,499</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-2xl hover:-translate-y-1 transition">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/book/j/f/q/-original-imagnhh9gsj5hkkt.jpeg?q=70" class="w-full h-60 object-contain" alt="Books">
+        <h3 class="mt-2 font-semibold">Books Collection</h3>
+        <p class="text-sm text-gray-600">Bestsellers to boost your knowledge</p>
+        <p class="text-lg font-bold mt-1 text-green-600">₹499</p>
+        <div class="flex gap-2 mt-2">
+          <button class="bg-yellow-400 px-3 py-1 rounded-lg hover:bg-yellow-500">Add to Cart</button>
+          <button class="bg-orange-500 text-white px-3 py-1 rounded-lg hover:bg-orange-600">Buy Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 mt-10 py-10 px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="font-bold text-white mb-3">About</h3>
+        <ul class="space-y-2 text-sm">
+          <li>Contact Us</li>
+          <li>About Us</li>
+          <li>Careers</li>
+          <li>Flipkart Stories</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-white mb-3">Help</h3>
+        <ul class="space-y-2 text-sm">
+          <li>Payments</li>
+          <li>Shipping</li>
+          <li>Cancellation</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-white mb-3">Consumer Policy</h3>
+        <ul class="space-y-2 text-sm">
+          <li>Return Policy</li>
+          <li>Terms of Use</li>
+          <li>Security</li>
+          <li>Privacy</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font
+
+
